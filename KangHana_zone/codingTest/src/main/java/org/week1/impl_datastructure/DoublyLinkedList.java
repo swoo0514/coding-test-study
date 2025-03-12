@@ -1,4 +1,4 @@
-package KangHana_zone.codingTest.src.main.java.org.week1.impl_datastructure;
+package org.week1.impl_datastructure;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -207,7 +207,7 @@ public class DoublyLinkedList<E> {
         size = 0;
     }
 
-    static class Node<E> {
+    public static class Node<E> {
 
         Node<E> prev;
         Node<E> next;
@@ -218,6 +218,10 @@ public class DoublyLinkedList<E> {
             this.value = value;
             this.prev = null;
             this.next = null;
+        }
+
+        public E getValue() {
+            return this.value;
         }
     }
 }

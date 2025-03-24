@@ -10,7 +10,7 @@ vector<pair<int, int>> answer;
 int N, M, cnt = INT_MAX, idx;
 
 void bfs(int num) {
-  q.push({num, 0});
+  q.push({num, 0});  // 깊이(길이) 정보를 같이 삽입
   visited[num] = 1;
   int sum = 0;
   while (!q.empty()) {
@@ -22,8 +22,10 @@ void bfs(int num) {
     for (int i = 0; i < bacon[now].size(); i++) {
       int next = bacon[now][i];
       if (!visited[next]) {
-        nowcnt++;
+        nowcnt++;  // 부모 노드의 깊이보다 1이 큰 값을 저장
         q.push({next, nowcnt});
+        // 다시 돌려놓음으로써 같은 깊이의 다른 노드에 원치 않은 값이
+        // 저장되지 않도록 처리
         nowcnt--;
         visited[next] = 1;
       }

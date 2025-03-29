@@ -40,6 +40,7 @@ int main() {
   for (int i = 0; i < m; i++) {
     int u, v;
     cin >> u >> v;
+    // 가중치가 전부 1임
     graph[u].push_back({1, v});
   }
 

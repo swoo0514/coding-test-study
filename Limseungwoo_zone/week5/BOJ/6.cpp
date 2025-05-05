@@ -32,10 +32,10 @@ int main() {
   cin.tie(NULL);
   cout.tie(NULL);
   cin >> n;
-  if (n > 1022) {
-    cout << -1 << "\n";
-    exit(0);
-  }
+  // if (n > 1022) {  // 9876543210의 count
+  //   cout << -1 << "\n";
+  //   exit(0);
+  // }
   for (int i = 1; i <= 10; i++) {
     cur_depth = i;
     for (int j = 0; j <= 9; j++) {
@@ -44,5 +44,9 @@ int main() {
       if (cnt == n) break;
     }
     if (cnt == n) break;
+  }
+  if (cnt != n) {
+    cout << -1 << "\n";
+    exit(0);
   }
 }

@@ -4,7 +4,6 @@ using namespace std;
 
 int sushi[30004], cnt[30004], kind;
 int N, d, k, c, lp, rp, answer;
-queue<int> picked;
 
 int main() {
   ios_base::sync_with_stdio(false);
